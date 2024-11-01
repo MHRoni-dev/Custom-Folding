@@ -1,0 +1,62 @@
+{
+  "name": "custom-folding-extension",
+  "displayName": "Custom Folding Extension (beta) @MHRoni",
+  "description": "This is the beta version of Custom Folding Extension with experimental features.",
+  "version": "1.0.0",
+  "publisher": "MHRoni",
+  "engines": {
+      "vscode": "^1.60.0" 
+  },
+  "activationEvents": [
+      "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Custom Folding Extension",
+            "properties": {
+                "customFolding.enableAllFeatures": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Master toggle to enable or disable all custom folding features."
+                },
+                "customFolding.enableNormalCollapse": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable or disable the normal collapse feature."
+                },
+                "customFolding.startFoldingMarker": {
+                    "type": "string",
+                    "default": "// <",
+                    "description": "The marker used to start a folding region."
+                },
+                "customFolding.endFoldingMarker": {
+                    "type": "string",
+                    "default": "// >",
+                    "description": "The marker used to end a folding region."
+                },
+                "customFolding.enableInstantCollapse": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable instant collapse feature that collapses code until an empty line."
+                },
+                "customFolding.instantCollapseMarker": {
+                    "type": "string",
+                    "default": "// >>",
+                    "description": "The marker used for instant collapse."
+                }
+               
+            }
+        }
+    },
+  "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "echo 'No compilation step for JS'",
+      "test": "npm run test"
+  },
+  "devDependencies": {
+      "vscode": "^1.60.0",
+      "eslint": "^7.x.x" 
+  }
+}
