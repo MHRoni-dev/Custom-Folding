@@ -58,5 +58,9 @@
   "devDependencies": {
       "vscode": "^1.60.0",
       "eslint": "^7.x.x" 
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MHRoni-dev/Custom-Folding.git"
+    }
 }
