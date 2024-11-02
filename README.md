@@ -14,12 +14,18 @@ A custom folding extension for Visual Studio Code that offers enhanced control o
 - If a normal collapse section is encountered before an empty line, it will include the normal collapse within the instant collapse.
 - Configurable via settings to turn on/off as needed.
 
-### 3. Toggleable Settings
+### 3. Toggle Custom Folding (Keybinding: `Ctrl+.` for Toggle All/Selected, `Ctrl+A` to Toggle All)
+- **Single Toggle Command**: The toggle command can either toggle all collapsible ranges or only those within a selected region:
+  - **Toggle All**: If no text is selected, pressing `Ctrl+.` will toggle all collapsible ranges (fold/unfold) in the document.
+  - **Toggle Selected**: If a portion of text is selected, only the collapsible ranges within that selection will be toggled.
+- Provides a single, easy-to-use toggle functionality that adapts based on selection, improving usability and flexibility for managing large sections of code.
+
+### 4. Toggleable Settings
 - **Enable Normal Collapse**: Allows you to turn on or off the normal collapse feature without reloading.
 - **Enable Instant Collapse**: Instantly toggle the instant collapse feature.
 - **Enable All Features**: A master setting to enable or disable all custom folding features.
 
-### 4. Transparent Color Coding (Optional)
+### 5. Transparent Color Coding (Optional)
 - Each folding section (start and end lines) can be colorized with a transparent color to visually distinguish different code blocks.
 - Random colors are assigned to pairs of markers to maintain clarity in the code structure.
 - Adjust the transparency so that text remains clearly visible.
@@ -39,7 +45,8 @@ This extension contributes the following settings:
 
 1. Add the start and end markers in your code where you want collapsible sections.
 2. Adjust the settings in your VS Code settings to customize the markers and enable/disable features.
-3. The extension will automatically apply folding and color coding based on your settings.
+3. Use the toggle command (`Ctrl+.`) to collapse/unfold all ranges or only selected ranges, depending on whether text is selected.
+4. The extension will automatically apply folding and color coding based on your settings.
 
 ## Installation
 
@@ -53,4 +60,4 @@ Feel free to open issues and submit pull requests to improve this extension.
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE).

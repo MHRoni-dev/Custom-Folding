@@ -2,7 +2,7 @@
   "name": "custom-folding-extension",
   "displayName": "Custom Folding Extension (beta) @MHRoni",
   "description": "This is the beta version of Custom Folding Extension with experimental features.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "MHRoni",
   "engines": {
       "vscode": "^1.60.0" 
@@ -46,9 +46,23 @@
                     "default": "// >>",
                     "description": "The marker used for instant collapse."
                 }
-               
             }
-        }
+        },
+        "commands": [
+      {
+        "command": "extension.toggleCustomFolding",
+        "title": "Toggle Custom Folding Ranges",
+        "category": "Custom Folding"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.toggleCustomFolding",
+        "key": "ctrl+. ctrl+a",
+        "mac": "cmd+. cmd+a",
+        "when": "editorTextFocus"
+      }
+    ]
     },
   "scripts": {
       "vscode:prepublish": "npm run compile",
